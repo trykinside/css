@@ -140,33 +140,48 @@ We recommend a variant of BEM with PascalCased “blocks”, which works particu
 **Example**
 
 ```jsx
-// ListingCard.jsx
-function ListingCard() {
-  return (
-    <article class="ListingCard ListingCard--featured">
+// ListingCard.vue
+<template>
+  <article class="listing-card listing-card--featured">
+    <h1 class="listing-card__title">Happy kids Wonderschool</h1>
 
-      <h1 class="ListingCard__title">Adorable 2BR in the sunny Mission</h1>
+    <div class="listing-card__content">
+      <p>Vestibulum id ligula porta felis euismod semper.</p>
+      <small class="listing-card__comment">This is a small comment.</small>
+    </div>
+  </article>
+</template>
 
-      <div class="ListingCard__content">
-        <p>Vestibulum id ligula porta felis euismod semper.</p>
-      </div>
+<script>
+export default {};
+</script>
 
-    </article>
-  );
+<style lang="scss" scoped>
+.listing-card {
+  // ...
+
+  &--featured {
+    // ...
+  }
+
+  &__title {
+    // ...
+  }
+
+  &__content {
+    // ...
+  }
+
+  &__comment {
+    // ...
+  }
 }
+</style>
 ```
 
-```css
-/* ListingCard.css */
-.ListingCard { }
-.ListingCard--featured { }
-.ListingCard__title { }
-.ListingCard__content { }
-```
-
-  * `.ListingCard` is the “block” and represents the higher-level component
-  * `.ListingCard__title` is an “element” and represents a descendant of `.ListingCard` that helps compose the block as a whole.
-  * `.ListingCard--featured` is a “modifier” and represents a different state or variation on the `.ListingCard` block.
+  * `.listing-card` is the “block” and represents the higher-level component
+  * `.listing-card__title` is an “element” and represents a descendant of `.ListingCard` that helps compose the block as a whole.
+  * `.listing-card--featured` is a “modifier” and represents a different state or variation on the `.ListingCard` block.
 
 ### ID selectors
 
