@@ -140,7 +140,7 @@ We recommend a variant of BEM with PascalCased “blocks”, which works particu
 **Example**
 
 ```jsx
-// ListingCard.vue
+// listing-card.vue
 <template>
   <article class="listing-card listing-card--featured">
     <h1 class="listing-card__title">Happy kids Wonderschool</h1>
@@ -180,8 +180,8 @@ export default {};
 ```
 
   * `.listing-card` is the “block” and represents the higher-level component
-  * `.listing-card__title` is an “element” and represents a descendant of `.ListingCard` that helps compose the block as a whole.
-  * `.listing-card--featured` is a “modifier” and represents a different state or variation on the `.ListingCard` block.
+  * `.listing-card__title` is an “element” and represents a descendant of `.listing-card` that helps compose the block as a whole.
+  * `.listing-card--featured` is a “modifier” and represents a different state or variation on the `.listing-card` block.
 
 ### ID selectors
 
